@@ -1,0 +1,116 @@
+/**
+ * desc: 
+ * User: Renjian.Tang/renjian.tang@gymboglobal.com
+ * Date: 2019/12/30
+ * Time: 上午10:49
+ */
+@import "../theme";
+@import "../func";
+
+.gym-oa-download{
+  background: url("../../images/download_bg.png") no-repeat;
+  background-size: cover;
+  position: relative;
+  min-height: 635px;
+  &-logo{
+    position: absolute;
+    width: transRem(300px);
+    top: transRem(50px);
+    left: transRem(50px);
+    &-img{
+      width: 100%;
+
+    }
+  }
+
+  &-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 100%;
+    &-phone{
+      height: 75%;
+      img{
+        height: 100%;
+      }
+    }
+    &-code{
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      width: transRem(270px);
+      &-box{
+        //background: $gymFontWhiteColor;
+        //border-radius: $divBorderRadius/2;
+        //display: flex;
+        //flex-direction: column;
+        //align-items: center;
+        //box-shadow: 0px 8px 28px 0px rgba(0,0,0,0.1);
+        //padding: transRem(15px);
+        //margin-bottom: transRem(35px);
+      }
+      &-title{
+        display: flex;
+        align-items: center;
+        margin-bottom: transRem(35px);
+        &-logo{
+          width: transRem(64px);
+          height: transRem(64px);
+          margin-right: transRem(18px);
+          img{
+            width: 100%;
+          }
+        }
+        &-text{
+          color: $gymFontWhiteColor;
+          .lg{
+            font-size: transRem(24px);
+            font-weight: bold;
+          }
+          .xs{
+            font-size: transRem(16px);
+          }
+        }
+      }
+      &-content{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: transRem(25px);
+        &-img{
+          width: transRem(120px);
+          height: transRem(120px);
+          margin-bottom: transRem(10px);
+        }
+        &-text{
+          color: $gymFontWhiteColor;
+          font-size: transRem(12px);
+          text-align: center;
+        }
+      }
+      &-desc{
+        &-content{
+          display: flex;
+          color: $gymFontWhiteColor;
+          font-size: transRem(14px);
+          align-items: center;
+          margin-bottom: transRem(15px);
+          &-logo{
+            width: transRem(36px);
+            height: transRem(36px);
+            margin-left: transRem(5px);
+            img{
+              width:100%;
+            }
+          }
+        }
+        //font-size: transRem(14px);
+        //margin-bottom: transRem(5px);
+        //&.sm{
+        //  text-align: center;
+        //  color: $gymFontWhiteColor;
+        //  font-size: transRem(14px);
+        //}
+      }
+    }
+  }
+}

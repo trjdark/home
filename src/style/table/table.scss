@@ -1,0 +1,51 @@
+/**
+ * desc: 表格
+ * User: Renjian.Tang/renjian.tang@gymboglobal.com
+ * Date: 2018/10/8
+ * Time: 下午3:27
+ */
+
+@import "../func";
+@import "../theme";
+
+.gym-table{
+  border-radius: 4px;
+  border: 1px solid #E5E5E5;
+  overflow: hidden;
+  margin-bottom: transRem(20px);
+  .ant-table-thead > tr > th{
+    border-bottom: 1px solid #E8EAEC;
+    color: #333;
+    // text-align: center;
+    padding: 12px 16px;
+    font-size: 12px;
+  }
+  .ant-table-tbody > tr {
+    & > td{
+      // text-align: center;
+      border: none;
+      height: 40px;
+      border-bottom: 1px solid #E8EAEC;
+      font-size: 12px;
+    }
+  }
+  .ant-table-footer{
+    background: #fff;
+    text-align: right;
+  }
+  // 操作
+  &-action{
+    // display: flex;
+    justify-content: center;
+    &-edit{
+      color: $themeColor;
+      cursor: pointer;
+      // margin-left: transRem(10px);
+    }
+  }
+  span:nth-child(2){
+    margin-left: transRem(10px);
+  }
+}
+
+

@@ -1,0 +1,313 @@
+/**
+ * desc: 
+ * User: Renjian.Tang/renjian.tang@gymboglobal.com
+ * Date: 2018/7/31
+ * Time: 下午4:45
+ */
+
+@import "../func";
+@import "../theme";
+
+$loginFormWidth: transRem(650px);
+$fontSize:transRem(20px);
+$formItemHeight: transRem(50px);
+$itemWidth: transRem(360px);
+$inputBorderColor: #dcdcdc;
+
+.gym-login {
+  //&-backgroundImage{
+  //  background: url("../../images/login/login_bg.png") no-repeat;
+  //  background-size: cover;
+  //}
+
+  &-wraper{
+    //width: $loginFormWidth;
+    //height: 100%;
+    //float: right;
+    background-color: $themeColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  &-form{
+    width: transRem(400px);
+    height: transRem(400px);
+    border-radius: $divBorderRadius;
+    background: rgba(256, 256, 256, 0.9);
+    padding: transRem(10px);
+    margin: auto;
+    // 切换图标区域
+    &-tap{
+      height: transRem(80px);
+      &-wrap{
+        display: flex;
+        justify-content: flex-end;
+        &-desc{
+          background: $gymFontWhiteColor;
+          border-radius: $divBorderRadius / 2;
+          border: 1px solid $themeColor;
+          width: transRem(140px);
+          height: transRem(30px);
+          line-height: transRem(30px);
+          text-align: center;
+          .iconfont{
+            color: $themeColor;
+            margin-right: transRem(5px);
+            font-size: transRem(14px);
+          }
+        }
+        &-div{
+          width: transRem(80px);
+          height: transRem(80px);
+          cursor: pointer;
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+    // 表单item区域
+    &-item{
+      margin-right: transRem(0);
+      &-inputs{
+        border: 1px solid $inputBorderColor;
+        border-radius: $divBorderRadius;
+      }
+      &-input{
+        margin: 0;
+        .ant-form-item-control{
+          line-height: normal;
+          .ant-input{
+            border: none;
+            height: $formItemHeight;
+          }
+        }
+
+      }
+      &-input.username-input{
+        border-bottom: 1px solid $inputBorderColor;
+        .ant-input{
+          border-radius: transArray(10px 10px 0 0);
+          &:focus{
+            caret-color: $themeColor;
+            box-shadow: none;
+          }
+        }
+      }
+      &-input.password-input{
+        .ant-input{
+          border-radius: transArray(0 0 10px 10px);
+          &:focus{
+            caret-color: $themeColor;
+            box-shadow: none;
+          }
+        }
+      }
+      &-link{
+        text-align: right;
+        margin-bottom: 0;
+        a {
+          color: $gymFontGrayColor;
+          text-decoration: underline;
+          font-size: 14px;
+        }
+      }
+      &-logo {
+        width: transRem(180px);
+        margin: auto;
+        img{
+          width: 100%;
+        }
+      }
+      &-button{
+        width: 100%;
+        height: $formItemHeight;
+        border: none;
+        border-radius: $divBorderRadius;
+        color: $gymFontWhiteColor;
+        background: $themeColor;
+        font-size: $fontSize;
+        cursor: pointer;
+        &.grey{
+          background: #dcdcdc;
+          color: #aaaaaa;
+          cursor: no-drop;
+        }
+        //&:hover{
+        //  color: $gymFontWhiteColor;
+        //  background: $themeColor;
+        //}
+      }
+    }
+    // 扫码登录
+    &-code{
+      position: relative;
+      &-img{
+        background: $gymFontWhiteColor;
+        width: transRem(200px);
+        height: transRem(200px);
+        margin: 0 auto 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &-err{
+        position: absolute;
+        z-index: 1;
+        width: transRem(200px);
+        height: transRem(200px);
+        top:0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(256, 256, 256, 0.8);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &-text{
+          color: $gymFontGrayColor2;
+          font-size: transRem(16px);
+          margin-bottom: transRem(10px);
+          font-weight: 700;
+        }
+        &-button{
+          border: none;
+          width: transRem(120px);
+          background: #DA291C;
+          color: $gymFontWhiteColor;
+          border-radius: $divBorderRadius / 2;
+          height: transRem(35px);
+          cursor: pointer;
+        }
+      }
+      &-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .anticon{
+          color: $themeColor;
+          font-size: transRem(26px);
+          margin-right: transRem(10px);
+        }
+      }
+    }
+
+    &-scan{
+      &-img{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-img{
+          width: transRem(98px);
+          margin-bottom: transRem(24px);
+        }
+      }
+      &-success{
+        &-text{
+          font-size: transRem(12px);
+        }
+        &-text2{
+          font-size: transRem(14px);
+          margin-bottom: transRem(5px);
+        }
+        &-text3{
+          font-size: transRem(12px);
+          color: $gymErrorRed;
+          cursor: pointer;
+        }
+      }
+    }
+
+    /*************错误提示****************/
+    .err-div{
+      margin-bottom: transRem(10px);
+      width: $itemWidth;
+      color: $gymFontGrayColor;
+      line-height: 18px;
+      text-align: center;
+      .icon{
+        width: transRem(18px);
+        height: transRem(18px);
+        font-size: transRem(18px);
+        text-align: center;
+        background: $gymFontWhiteColor;
+        border-radius: 18px;
+        color: $gymErrorRed;
+        margin-right: transRem(5px);
+        &.un{
+          color:gray;
+        }
+      }
+    }
+  }
+
+  &-mobile{
+    width: transRem(400px);
+    margin-left: transRem(40px);
+    text-align: center;
+    .iconfont{
+      font-size: transRem(26px);
+      margin-right: transRem(10px);
+    }
+    a{
+      color: $gymFontWhiteColor;
+      font-size: transRem(18px);
+    }
+
+  }
+}
+
+.gym-watermark-div{
+  width: transRem(300px);
+  margin: transRem(15px) auto;
+  &-img{
+    width: 100%;
+  }
+}
+
+.gym-modal.ant-modal{
+  /***********登陆弹窗样式***********/
+  width: transRem(400px) !important;
+  top: 40%;
+  //transform: translate(0, -50%);
+  .ant-modal-content{
+    border-radius: transRem(10px);
+
+  }
+  .ant-modal-body{
+    font-size: transRem(16px);
+    text-align: left;
+    color:#333;
+  }
+  .ant-modal-footer{
+    border-top:none;
+    .gym-login-form-modal-buttons{
+      width: transRem(320px);
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      &-link{
+        border: none;
+        background: $themeColor;
+        color: $gymFontWhiteColor;
+        width: transRem(150px);
+        height: transRem(40px);
+        line-height: transRem(40px);
+        font-size: transRem(14px);
+        border-radius: transRem(10px);
+      }
+      &-cancel{
+        border: none;
+        background: $secondThemeColor;
+        color: $gymFontWhiteColor;
+        width: transRem(150px);
+        height: transRem(40px);
+        line-height: transRem(40px);
+        font-size: transRem(14px);
+        border-radius: transRem(10px);
+      }
+    }
+  }
+}

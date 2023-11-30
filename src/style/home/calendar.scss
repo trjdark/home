@@ -1,0 +1,218 @@
+/**
+ * desc: 日历样式
+ * User: Renjian.Tang/renjian.tang@gymboglobal.com
+ * Date: 2018/9/8
+ * Time: 下午1:56
+ */
+@import "../func";
+@import "../theme";
+
+@mixin dateDiv {
+  border: none;
+  border-radius: transRem(34px);
+  width:transRem(34px);
+  height: transRem(34px);
+  line-height: transRem(34px);
+  margin: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+@mixin textDiv{
+  border-radius: transRem(28px);
+  width:transRem(28px);
+  height: transRem(28px);
+  line-height: transRem(28px);
+  margin: auto;
+  text-align: center;
+}
+
+.gym-home-calendar{
+  position: relative;
+  z-index: 10;
+  height: transRem(328px);
+  &-wrap{
+    border-radius: $divBorderRadius;
+    overflow: hidden;
+    background: $gymFontWhiteColor;
+    box-shadow: 0px 2px 2px rgba(248, 243, 240, 0.8);
+    .rc-calendar{
+      border-radius:0;
+      width: transRem(470px);
+      height: transRem(280px);
+      box-shadow: none;
+      border: none;
+      &-header{
+        border-bottom: none;
+        height: transRem(40px);
+        line-height: transRem(50px);
+      }
+      &-prev-year-btn{
+        display: none;
+      }
+      &-next-year-btn{
+        display: none;
+      }
+      &-column-header{
+        padding: 0;
+      }
+      // 日期单元格
+      &-cell{
+        //height: transRem(40px);
+        .gym-calendar-date{
+          @include dateDiv;
+          &-text{
+            @include textDiv;
+          }
+        }
+      }
+      // 有会议的日期
+      .gym-calendar-date.done{
+        .gym-calendar-date-text{
+          @include textDiv;
+          border: 1px solid $thirdThemeColor;
+          cursor: pointer;
+        }
+      }
+      // 选中页面有会议
+      &-selected-date .gym-calendar-date.done{
+        border: 1px solid $thirdThemeColor;
+        cursor: pointer;
+        .gym-calendar-date-text{
+          background: $thirdThemeColor;
+          color: $gymFontWhiteColor;
+          border: none;
+        }
+      }
+      // 今天没有会议日期
+      &-today .gym-calendar-date{
+        &-text{
+          @include textDiv;
+          background: $themeColor !important;
+          color: $gymFontWhiteColor;
+          border:none !important;
+        }
+      }
+      // 今天有会议日期样式
+      &-today .gym-calendar-date.done{
+        @include dateDiv;
+        border: 1px solid $themeColor;
+        &-text{
+          @include textDiv;
+          background: $themeColor;
+          color: $gymFontWhiteColor;
+
+        }
+      }
+      &-next-month-btn-day,&-last-month-cell{
+        color:#aaa;
+      }
+      &-footer{
+        display: none;
+      }
+    }
+    // 会议弹窗
+    &-meeting{
+      display: none;
+      border-top: 1px solid #eeeeee;
+      box-shadow: 0px 5px 3px #000;
+
+      &.active{
+        display: block;
+      }
+      &-title{
+        padding: transArray(14px 40px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-date{
+          color: $themeColor;
+          font-size: transRem(22px);
+        }
+        &-close{
+          display: inline-block;
+          width:transRem(26px);
+          height: transRem(26px);
+          border-radius: transRem(26px);
+          background: #eee;
+          color:#999;
+          //background: $gymFontWhiteColor;
+          //color: $thirdThemeColor;
+          //border: 1px solid $thirdThemeColor;
+
+          font-size: transRem(22px);
+          line-height: transRem(26px);
+          text-align: center;
+          cursor: pointer;
+          transition: all 0.4s ease-in;
+          &:hover{
+            transition: all 0.4s ease-in;
+            transform: rotate(180deg);
+            background: $thirdThemeColor;
+            color: $gymFontWhiteColor;
+          }
+        }
+      }
+      &-content{
+        padding: transArray(0 30px);
+        max-height: transRem(160px);
+        overflow: auto;
+        .ant-steps-item-icon{
+          width: transRem(10px);
+          height: transRem(10px);
+        }
+        .ant-steps-item-process .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot,
+        .ant-steps-item-wait .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot{
+          width: transRem(7px);
+          height: transRem(7px);
+          background: $secondThemeColor;
+          color:#666 !important;
+        }
+
+        .ant-steps-item{
+          &-content{
+            display: flex;
+            width: transRem(360px);
+            min-height: transRem(40px);
+
+          }
+          &-title{
+            width: transRem(100px);
+            font-size: transRem(14px);
+          }
+          &-description{
+            width: transRem(360px);
+            font-size: transRem(14px);
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+          }
+        }
+
+        &-date, &-title{
+          color:#666;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+  &-header{
+    color:$themeColor;
+    font-size: transRem(24px);
+  }
+  .rc-calendar-next-month-btn, .rc-calendar-prev-month-btn{
+    font-size: transRem(20px);
+    color: $secondThemeColor;
+    line-height: transRem(50px);
+    .iconfont{
+      font-size: transRem(22px);
+    }
+    &:after{
+      content: '';
+    }
+    &:hover{
+      color: $themeColor;
+    }
+  }
+}

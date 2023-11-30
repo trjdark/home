@@ -1,0 +1,195 @@
+/**
+ * desc: 
+ * User: Renjian.Tang/renjian.tang@gymboglobal.com
+ * Date: 2018/8/3
+ * Time: 下午2:02
+ */
+@import "../func";
+@import "../theme";
+
+$headerHeight: transRem(60px);
+$iconColor: #ffccaa;
+$iconHoverColor: #ffffff;
+$fontFamily:微软雅黑;
+
+
+#gym-layout-header {
+  height: $headerHeight;
+  background: $themeColor;
+}
+
+.gym-layout-header{
+
+  &-logo{
+    line-height: $headerHeight;
+    float: left;
+    &-img{
+      height: transRem(30px);
+    }
+  }
+
+  &-nav{
+    float: right;
+    display: flex;
+    &-icon-box{
+      line-height: $headerHeight;
+      font-size: transRem(22px);
+      color: $iconColor;
+      cursor: pointer;
+      margin-right: transRem(50px);
+      &:hover{
+        color: $iconHoverColor;
+      }
+    }
+    &-person{
+      line-height: $headerHeight;
+      color: $iconColor;
+      font-size: transRem(14px);
+      cursor: pointer;
+      &:hover{
+        color: $iconHoverColor;
+      }
+      &-avatar{
+        width: transRem(40px);
+        height: transRem(40px);
+        border-radius: transRem(40px);
+        margin-right: transRem(5px);
+      }
+      &-menu{
+        width: transRem(100px);
+        text-align: center;
+        font-size: transRem(14px);
+        &-item{
+          border-radius: transRem(10px);
+          overflow: hidden;
+          &:hover, a:hover{
+            background: #f19455;
+            color: $gymFontWhiteColor;
+          }
+
+        }
+      }
+    }
+    &-icon{
+      font-size: transRem(22px);
+    }
+  }
+  /***************版本故事********************/
+
+  &-version{
+    width: transRem(900px) !important;
+    font-family: $fontFamily !important;
+    .ant-modal{
+      &-content{
+        border-radius: $divBorderRadius;
+      }
+      &-header{
+        border-radius: transArray($divBorderRadius $divBorderRadius 0 0 );
+        background: $themeColor;
+      }
+      &-body{
+        padding: transRem(20px);
+        .ant-divider{
+          margin: transArray(10px 0);
+        }
+      }
+      &-footer{
+        border-top: none;
+      }
+    }
+    &-logo{
+      width: transRem(166px);
+    }
+
+
+    &-box{
+      display: flex;
+      justify-content: space-between;
+      &-button{
+        border: none;
+        border-radius: 4px;
+        background: $themeColor;
+        color: #fff;
+        padding: 5px 25px;
+      }
+    }
+
+    &-title{
+      display: flex;
+      color: $secondThemeColor;
+      align-items: center;
+      &-icon{
+        height: transRem(22px);
+        margin-right: transRem(5px);
+        color: $gymFontWhiteColor;
+      }
+      &-text{
+        font-size: transRem(22px);
+        color: $gymFontWhiteColor;
+      }
+    }
+    &-close{
+      font-size: transRem(26px);
+      color: $gymFontWhiteColor;
+      cursor: pointer;
+    }
+
+    &-collapse{
+      height: transRem(427px);
+      overflow: auto;
+      background: $gymFontWhiteColor;
+      &-icon{
+        font-size: transRem(20px);
+        margin-right: transRem(6px);
+        color: $gymIconGray;
+        &.active{
+          color: $themeColor;
+        }
+      }
+    }
+    &-desc{
+      &-version{
+        font-family: $fontFamily !important;
+        color: $gymFontGrayColor;
+        margin-right: transRem(10px);
+        &-date{
+          font-family: $fontFamily !important;
+          color: $gymFontGrayColor;
+        }
+      }
+      &-content {
+        &-div > p{
+          font-family: $fontFamily !important;
+        }
+      }
+      &-content.ant-collapse-item.ant-collapse-item-active{
+      }
+      &-content.ant-collapse-item{
+        border-bottom: none;
+        .ant-collapse-header{
+          background: $gymFontWhiteColor;
+          padding-left: transRem(0px) !important;
+        }
+        .ant-collapse-content{
+          border-top: none;
+        }
+        .ant-collapse-content-box{
+          border-radius: $divBorderRadius;
+          background: $gymInputBackground;
+          max-height: transRem(262px);
+          overflow: auto;
+        }
+      }
+    }
+    &-content{
+      img{
+        max-width: 860px !important;
+        height: auto !important;
+      }
+    }
+  }
+}
+
+.ant-modal-mask{
+  background: rgba(248, 243, 240, 0.8);
+}

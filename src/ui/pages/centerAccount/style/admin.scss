@@ -1,0 +1,115 @@
+@import "../../../../style/theme";
+@import "../../../../style/func";
+@import "../../../../style/web";
+
+.gym-center-account{
+  &-popover{
+    //&-text{
+    //  margin-left: transRem(14px);
+    //}
+    &-btn{
+      padding-top: transRem(14px);
+      height: transRem(40px);
+    }
+  }
+}
+
+.detail-btn{
+  color: #EF7421;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.disable-btn{
+  color: #ccc;
+  &:hover{
+    cursor: default;
+  }
+}
+
+.gym-icon-danger {
+  color: $gymErrorRed;
+}
+.gym-button-unbind {
+  float: right;
+  background-color: #FFF;
+  border: 1px solid #EF7421;
+  color: #EF7421;
+  border-radius: 5px;
+  width: transRem(60px);
+  font-size: 12px;
+  height: transRem(25px);
+  &:hover {
+    background-color: #EF7422;
+    border-color: #ffa452;
+    color: #FFF;
+  }
+}
+.gym-button-bind {
+  float: right;
+  background-color: #EF7422;
+  border: 1px solid #ffa452;
+  color: #FFF;
+  border-radius: 5px;
+  width: transRem(60px);
+  font-size: 12px;
+  height: transRem(25px);
+  margin-left: transRem(20px);
+  &:hover {
+    background-color: #ffa452;
+    border-color: #ffa452;
+    color: #FFF;
+  }
+}
+$labelWidth:transRem(160px);
+$inputWidth: transRem(200px);
+$selectWidth: transRem(200px);
+//新建AD
+.gym-AD-create {
+  .ant-form-item{
+    display: flex;
+
+    .ant-input-group-addon {
+      color: red;
+    }
+  }
+  .ant-form-item-label{
+    width: $labelWidth;
+    text-align: right;
+  }
+  .ant-form-item-control{
+    width: $inputWidth
+  }
+
+  .gym-employee-add-form-note {
+    .ant-form-item-control{
+      width: transRem(650px);
+    }
+  }
+
+  .gym-search-input-xl  {
+    .gym-form-input {
+      width: 240px;
+    }
+  }
+}
+
+.gym-examine-create-email-modal{
+  .ant-form-item {
+    display: flex;
+  }
+  .ant-modal-content {
+    border-radius: 26px;
+    .ant-modal-header {
+      border-radius: 26px;
+      border: none;
+    }
+  }
+  //.ant-modal {
+  //  width: transRem(400px) !important;
+  //}
+}
+.email-apply-state-popover{
+  max-width: 500px;
+}

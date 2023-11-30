@@ -1,0 +1,30 @@
+/**
+ * desc: 主题
+ * User: Renjian.Tang/renjian.tang@gymboglobal.com
+ * Date: 2018/9/3
+ * Time: 下午4:09
+ */
+
+@import "func";
+
+$themeColor: #ef7421;
+$secondThemeColor: #e8927c;
+$thirdThemeColor: #f3c8bd;
+$gymErrorRed: #e9300b;
+$gymSuccessGreen: #23c46b;
+$gymWarningYellow: #ffa300;
+$gymFontWhiteColor: #ffffff;
+$gymIconGray: #cacaca;
+$gymFontGrayColor: #666666;
+$gymFontGrayColor2: #333333;
+$gymInputBackground: #f8f3f0;
+
+$divBorderRadius: transRem(10px);
+$fontIconSize: transRem(25px);
+$fontTitleSize: transRem(16px);
+$fontSize: transRem(14px);
+
+.page-wrap{
+  margin: 20px 0 20px 20px;
+  background-color: #FFF;
+}

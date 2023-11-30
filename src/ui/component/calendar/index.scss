@@ -1,0 +1,50 @@
+/**
+ * desc: 日历样式
+ * User: colin.lu
+ * Date: 2018/8/9
+ * Time: 下午12:39
+ */
+.events {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.events .ant-badge-status {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  text-overflow: ellipsis;
+  font-size: 12px;
+}
+.notes-month {
+  text-align: center;
+  font-size: 28px;
+}
+.notes-month section {
+  font-size: 28px;
+}
+
+.ant-fullcalendar-header {
+  display: none;
+}
+.ant-fullcalendar{
+  border-top: none !important;
+}
+
+.ant-fullcalendar-date {
+  height:30px !important;
+}
+
+.ant-fullcalendar-today {
+  .ant-fullcalendar-value{
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    border:2px solid orange !important;
+    border-radius:50% !important;
+    box-shadow: none;
+  }
+}
+
+.ant-fullcalendar-content {
+  display: none;
+}

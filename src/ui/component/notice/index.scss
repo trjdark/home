@@ -1,0 +1,25 @@
+/**
+ * desc: 被踢出提示框样式
+ * User: Renjian.Tang/renjian.tang@gymboglobal.com
+ * Date: 2018/9/15
+ * Time: 下午6:35
+ */
+.gym-shadow-box{
+
+  &-buttons{
+    &-button{
+      display: block;
+      text-align: center;
+      width: 160px;
+      height: 40px;
+      line-height: 40px;
+      margin: auto;
+      border-radius: 10px;
+      border: none;
+      background: #EF7421;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+}

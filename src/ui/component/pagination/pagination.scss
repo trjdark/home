@@ -1,0 +1,82 @@
+/**
+ * desc: 分页样式
+ * User: colin.lu
+ * Date: 2018/8/9
+ * Time: 下午12:39
+ */
+ @import "../../../style/func";
+ @import "../../../style/theme";
+ 
+ @mixin button {
+   //border-radius: 50%;
+ }
+ 
+ .gym-page-content{
+   &-wrap{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     font-size: transRem(12px);
+     padding-bottom: transRem(20px);
+     /********当前按钮样式*********/
+     .ant-pagination-item {
+       @include button;
+       background-color: #fff;
+       &:hover {
+         color:$themeColor;
+         border-color: $themeColor;
+         a{
+           color: $themeColor;
+         }
+       }
+       &-active {
+         color: $themeColor;
+         border-color: $themeColor;
+         a{
+           color: $themeColor;
+         }
+       }
+     }
+     // 跳转输入框todo
+     .ant-pagination-options-quick-jumper input{
+       width: 32px;
+       padding: 4px;
+     }
+ 
+     .ant-pagination-item-link {
+       @include button;
+       &:hover {
+         border-color: $themeColor;
+         color: $themeColor;
+       }
+     }
+     // 选择
+     .ant-select-dropdown-menu-item {
+       &:hover {
+         background-color: $themeColor;
+       }
+     }
+ 
+     .ant-pagination-disabled {
+ 
+       &:hover {
+         a {
+           color: #d9d9d9 !important;
+           border-color: #d9d9d9 !important;
+         }
+       }
+     }
+     //
+     &-number{
+       color: $gymFontGrayColor;
+     }
+     &-text{
+       color: #999;
+     }
+   }
+   .ant-pagination {
+     font-size: 12px;
+   }
+ }
+ 
+ 

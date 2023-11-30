@@ -1,0 +1,110 @@
+/**
+ * desc: 
+ * User: Renjian.Tang/renjian.tang@gymboglobal.com
+ * Date: 2018/8/6
+ * Time: 下午6:21
+ */
+
+@import "../func";
+@import "../web";
+@import "../theme";
+
+
+.gym-home{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: transRem(40px);
+  &-left-content{
+    width: transRem(470px);
+  }
+  &-right-content{
+
+  }
+  &-wrap-title{
+    color: $secondThemeColor;
+    line-height: transRem(40px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    &-icon{
+      font-size: $fontIconSize;
+      margin-right: transRem(6px);
+    }
+    &-text{
+      font-size: $fontTitleSize;
+    }
+    &-refresh{
+      width: transRem(33px);
+      height: transRem(33px);
+      line-height: transRem(33px);
+      position: absolute;
+      right: 0;
+      text-align: center;
+      background: $thirdThemeColor;
+      border-radius: transRem(33px);
+      cursor: pointer;
+      transition: all 0.4s ease;
+      .iconfont{
+        font-size: transRem(22px);
+        color: $gymFontWhiteColor;
+      }
+      &:hover{
+        transition: all 0.4s ease;
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &-download-qr-code{
+    position: fixed;
+    padding: transRem(10px);
+    width: transRem(110px);
+    //height: transRem(100px);
+    border-radius: $divBorderRadius/2;
+    background: $gymFontWhiteColor;
+    right: transRem(20px);
+    bottom: transRem(20px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-text{
+      font-size: transRem(13px);
+      &.sm{
+        color: $gymFontGrayColor;
+        font-size: transRem(12px);
+      }
+    }
+    &-close{
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+
+.gym-dashboard-left {
+  width:50%;
+  min-width:235px;
+}
+
+
+
+//dashboard日历部分
+.gym-calendar-pic {
+  position:absolute;
+  margin: 0 auto;
+  padding: 0;
+  width:100%;
+}
+
+.gym-system-content {
+  //background-color: #D3D3D3;
+  height: 100%;
+}

@@ -1,0 +1,22 @@
+/**
+ * desc: 模版样式
+ * User: Renjian.Tang/renjian.tang@gymboglobal.com
+ * Date: 2018/8/3
+ * Time: 下午4:11
+ */
+@import "header";
+
+@import "../func";
+
+$contentBg: #FFF;
+#gym-layout-content {
+  display: flex;
+  background: $contentBg;
+  width: 100%;
+  padding-right: 10px;
+}
+.gym-content {
+  background: #f8f3f0;
+  position: relative;
+  //top: $headerHeight;
+}

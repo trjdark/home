@@ -1,0 +1,81 @@
+/**
+ * desc: 侧边栏样式
+ * User: Renjian.Tang/renjian.tang@gymboglobal.com
+ * Date: 2018/8/3
+ * Time: 下午2:02
+ */
+
+@import "../../style/func";
+.gym-sider{
+  width: 200px;
+  background: #FFF;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.20);
+  .ant-menu{
+    border-right: none;
+    &-submenu-title{
+      width: 100%;
+    }
+    .first-menu{
+      color: #EF7421;
+      span{
+        margin-left: transRem(10px);
+      }
+    }
+    .ant-menu-submenu-arrow {
+      color: #EF7421;
+      :hover{
+        color: #EF7421;
+      }
+    }
+    &-item{
+      &-mapping {
+        padding-left: transRem(16px);
+      }
+      font-size: transRem(13px);
+      margin-bottom: 0;
+      width: 230px;
+      a{
+        margin-left: transRem(10px);
+        color: #EF7421;
+      }
+      .iconfont {
+        color: #EF7421;
+      }
+      &-selected{
+        // border-left: 3px solid $themeColor;
+        font-weight: bold;
+        background: #EF7421  !important;
+        .item-text{
+          color: #FFF;
+        }
+        &:after{
+          border-right: none;
+        }
+        .iconfont{
+          color: #FFF;
+        }
+        a {
+          color: #FFF;
+        }
+        &:after{
+          border-right:none;
+        }
+      }
+      &-group-title{
+        font-size: transRem(14px);
+      }
+      &.ant-menu-item-active{
+        // a{
+        //   // color: #FFF;
+        // }
+
+      }
+
+    }
+
+  }
+  &-icon {
+    margin-right: 8px;
+    color: #FFF;
+  }
+}

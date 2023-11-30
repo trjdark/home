@@ -1,0 +1,207 @@
+/**
+ * desc: 网站的基础配置
+ * User: Renjian.Tang/renjian.tang@gymboglobal.com
+ * Date: 2018/8/3
+ * Time: 下午2:20
+ */
+/*页面基础样式*/
+$fontFamily:微软雅黑;
+$fontSize: 16px;
+$fontColor:#333;
+
+@import "func";
+@import "theme";
+
+//根据不同窗口大小设置不同的rem值
+@media screen and (max-width: 2000px){
+  html{
+    font-size: $devicePix1920;
+  }
+}
+@media screen and (max-width: 1700px){
+  html{
+    font-size: $devicePix1680;
+  }
+}
+@media screen and (max-width: 1400px) {
+  html{
+    font-size: $devicePix1366;
+  }
+}
+@media screen and (max-width: 1300px) {
+  html{
+    font-size: $devicePix1280;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $fontFamily;
+  font-size: transRem($fontSize);
+  color: $fontColor;
+  //overflow: hidden;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+ol,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+img{
+  border: none;
+}
+
+ul>li {
+  list-style: none;
+}
+
+* {
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  &:link{
+    text-decoration: none;
+  }
+  &:visited{
+    text-decoration: none;
+  }
+  &:active{
+    text-decoration: none;
+  }
+}
+
+#react-container{
+  min-width: 1200px;
+  min-height: 100%;
+}
+
+.gym-clearfix{
+  &:after { display: block;clear: both; content: ""}
+}
+
+.gym-wrapper{
+  width: 1200px;
+  margin: auto;
+}
+
+.font-center{
+  text-align: center;
+}
+.gym-button-create {
+  background-color: #FFF;
+  border-color: #EF7421;
+  color: #EF7421;
+  border-radius: 5px;
+  width: transRem(60px);
+  font-size: 14px;
+  height: transRem(25px);
+  margin-bottom: transRem(20px);
+  &:hover {
+    background-color: #EF7422;
+    border-color: #ffa452;
+    color: #FFF;
+  }
+  &margin{
+    margin-top: 20px;
+  }
+}
+.gym-button-refurbish{
+  margin-left: transRem(20px);
+  background-color: #EF7422;
+  border-color: #EF7422;
+  height: transRem(25px);
+  color: #FFF;
+  margin-bottom: transRem(25px);
+  &:hover {
+    background-color: #ffa452;
+    border-color: #ffa452;
+    color: #FFF;
+  }
+
+}
+.gym-button-reset{
+  width: transRem(80px);
+  color: #EF7422;
+  border-color: #EF7422;
+  &:hover {
+    background-color: #EF7422;
+    border-color: #ffa452;
+    color: #FFF;
+  }
+}
+.ant-btn-primary {
+  background-color: #EF7421;
+  border-color: #EF7421;
+  color: #FFFFFF;
+  width: transRem(80px);
+  &:hover {
+    background-color: #ffa452;
+    border-color: #ffa452;
+  }
+}
+.ml15 {
+  margin-left: 15px
+}
+.mb25 {
+  margin-bottom: 25px;
+}
+.fl {
+  float: left;
+}
+.fontW{
+  font-weight: bold;
+}
+.cR{
+  color: $gymErrorRed
+}
+.mr10 {
+  margin-right: 10px;
+}
+.text-c{
+  text-align: center;
+}
+.ant-btn-default {
+  color: #EF7421;
+  border-color: #EF7421;
+  &:hover {
+    background-color: #ffa452;
+    border-color: #ffa452;
+    color: #FFFFFF;
+  }
+
+  &:focus {
+    color: #EF7421;
+    border-color: #EF7421;
+    background-color: #FFFFFF;
+  }
+
+  &:active {
+    color: #EF7421;
+    border-color: #EF7421;
+    background-color: #FFFFFF;
+  }
+}
+.f18{
+  font-size: 18px;
+}
+
+

@@ -1,0 +1,22 @@
+/**
+ * desc: 我的消息tab
+ * User: colin.lu
+ * Date: 2018/8/14
+ * Time: 上午11:07
+ */
+
+//切换系统tab所有样式在ant-switch-system-tabs下中
+.ant-tabs{
+
+}
+
+.gym-small-round-btn{
+  float:right;
+  margin:12px;
+  width:transRem(70px);
+  height:transRem(40px);
+  border:none;
+  border-radius:15px;
+  background:pink;
+  color:white;
+}

@@ -1,0 +1,26 @@
+/**
+ * desc: 页面标题样式
+ * User: Renjian.Tang/trj8772@aliyun.com
+ * Date: 2018/8/11
+ * Time: 下午1:45
+ */
+@import "../../../style/func";
+@import "../../../style/theme";
+
+ .gym-page-title {
+    font-size: 16px;
+    &-content{
+      display: inline-block;
+      padding-left: transRem(10px);
+      font-size: transRem(16px);
+      line-height: transRem(14px);
+      border-left: 3px solid $themeColor;
+    }
+    &-text{
+        font-weight: bold;
+    }
+    .ant-divider{
+        margin: transArray(14px 0);
+        color: #F6F6F6;
+    }
+}

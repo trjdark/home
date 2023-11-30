@@ -1,0 +1,119 @@
+/**
+ * desc: 我的消息
+ * User: Renjian.Tang/renjian.tang@gymboglobal.com
+ * Date: 2018/9/6
+ * Time: 下午7:51
+ */
+@import "../theme";
+@import "../func";
+
+.gym-home-message{
+  width: transRem(470px);
+
+  &-content{
+    background: $gymFontWhiteColor;
+    border-radius: $divBorderRadius;
+    height: transRem(400px);
+    .ant-tabs-tab{
+      margin:0;
+      width: transRem(470px/2);
+      text-align: center;
+
+      &-active,&:hover{
+        width: transRem(470px/2);
+        color: $themeColor;
+      }
+    }
+    .ant-tabs-ink-bar{
+      background: $themeColor;
+      height: transRem(5px);
+      border-radius: transRem(5px);
+    }
+    &-soon{
+      padding-top: transRem(86px);
+      font-size: transRem(14px);
+      &-img{
+        width: transRem(104px);
+        margin: auto ;
+        img{
+          width: 100%;
+        }
+      }
+      &-p1{
+        margin-top: transRem(20px);
+        text-align: center;
+        color: $secondThemeColor;
+      }
+      &-p2{
+        margin-top: transRem(10px);
+        text-align: center;
+        color: #999;
+      }
+    }
+    .ant-tabs-content{
+      height: transRem(320px);
+    }
+
+    &-main{
+      height: transRem(320px);
+      overflow: auto;
+      &-item{
+        display: flex;
+        justify-content: left;
+        line-height: transRem(40px);
+        cursor: pointer;
+        margin: transArray(5px 0px 5px 0px);
+        //border-radius: transRem(10px);
+        color: $gymFontGrayColor2;
+        //background: rgba(50,50,50, 0.07);
+        &:hover{
+          background: rgba(50,50,50, 0.05);
+        }
+        //未读消息时整行效果
+        &-un{
+          background-color: #fae5d7;
+          font-weight: bold;
+        }
+        //未读消息时
+        &-flag-un{
+          color: #d62119;
+          font-size: 12px;
+          padding-left: 5px;
+        }
+        //已读消息时
+        &-flag{
+          width: transRem(30px);
+        }
+        &-time{
+          width: transRem(120px);
+        }
+        &-title{
+          width: transRem(280px);
+          overflow: hidden;
+          text-overflow:ellipsis;
+          white-space: nowrap;
+        }
+        &-name{
+          width: transRem(80px);
+          text-align: center;
+          overflow: hidden;
+          text-overflow:ellipsis;
+          white-space: nowrap;
+        }
+        // 更多
+        &-more{
+          cursor: pointer;
+          float: right;
+          margin-right: transRem(20px);
+          text-align: center;
+          text-decoration:underline;
+          width: transRem(100px);
+          font-size: transRem(12px);
+          line-height: transRem(20px);
+          border-radius: transRem(20px);
+        }
+      }
+    }
+
+  }
+}

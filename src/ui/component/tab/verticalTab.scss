@@ -1,0 +1,28 @@
+/**
+ * desc: 跳转系统tab
+ * User: colin.lu
+ * Date: 2018/8/14
+ * Time: 上午9:30
+ */
+
+//切换系统tab所有样式在ant-switch-system-tabs下中
+.ant-switch-system-tabs{
+  .ant-tabs-tab {
+    //writing-mode: vertical-lr;
+    //height:90px !important;
+  }
+
+  .ant-tabs-nav {
+
+  }
+
+  .ant-tabs-content {
+    border: 1px solid #D3D3D3;
+    height:100% !important;
+  }
+
+  .gym-tab-content {
+    height:80px;
+    line-height: 40px;
+  }
+}

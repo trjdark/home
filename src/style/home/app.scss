@@ -1,0 +1,74 @@
+/**
+ * desc: 我的百宝箱
+ * User: Renjian.Tang/renjian.tang@gymboglobal.com
+ * Date: 2018/9/8
+ * Time: 上午9:55
+ */
+@import "../theme";
+@import "../func";
+
+
+
+.gym-home-app{
+  &-content{
+    background: $gymFontWhiteColor;
+    border-radius: $divBorderRadius;
+    width: transRem(730px);
+    &-item{
+      border-radius: $divBorderRadius;
+      height: transRem(98px);
+      margin: transRem(12px);
+      padding: transArray(0 10px);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      transition: all 0.4s ease;
+      &:hover{
+        background: rgba(50,50,50, 0.07);
+        transition: all 0.4s ease;
+      }
+      // Todo
+      &-icon{
+        width: transRem(68px);
+        height: transRem(68px);
+        //border-radius: $divBorderRadius * 2 ;
+        cursor: pointer;
+        transition: all 0.3s ease-in;
+        &:hover{
+          transition: all 0.3s ease-in;
+          transform: scale(1.03);
+        }
+        img{
+          width: 100%;
+        }
+      }
+      &-title{
+        width: transRem(75px);
+        font-size: transRem(14px);
+        text-align: center;
+      }
+      &-info{
+        width: transRem(518px);
+        &-desc{
+          font-size: transRem(13px);
+        }
+        &-admin{
+          font-size: transRem(12px);
+          color: #999999;
+        }
+      }
+    }
+    &-empty{
+      width: transRem(681px);
+      margin: transRem(12px);
+      height: transRem(705px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p{
+        text-align: center;
+        color: #999;
+      }
+    }
+  }
+}

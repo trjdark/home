@@ -1,0 +1,91 @@
+/**
+ * desc: 下载app样式
+ * User: Renjian.Tang/renjian.tang@gymboglobal.com
+ * Date: 2018/11/7
+ * Time: 下午1:45
+ */
+
+@import "../theme";
+@import "../func";
+
+.gym-download{
+  background: url("../../images/download_bg.png") no-repeat;
+  background-size: cover;
+  position: relative;
+  min-height: 635px;
+  &-logo{
+    position: absolute;
+    width: transRem(300px);
+    top: transRem(50px);
+    left: transRem(50px);
+    &-img{
+      width: 100%;
+
+    }
+  }
+
+  &-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 100%;
+    &-phone{
+      height: 75%;
+      img{
+        height: 100%;
+      }
+    }
+    &-code{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-self: center;
+      width: transRem(200px);
+      &-box{
+        background: $gymFontWhiteColor;
+        border-radius: $divBorderRadius/2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0px 8px 28px 0px rgba(0,0,0,0.1);
+        padding: transRem(15px);
+        margin-bottom: transRem(35px);
+      }
+      &-title{
+        font-size: transRem(16px);
+        margin-bottom: transRem(12px);
+        font-weight: 700;
+        &-touch-logo{
+          border-radius: transRem(18px);
+          width: transRem(40px);
+          height: transRem(40px);
+          margin-right: transRem(8px);
+          box-shadow: 0px 5px 5px rgba(53,0,0,0.28);
+        }
+      }
+      &-img{
+        width: transRem(220px);
+        height: transRem(220px);
+        text-align: center;
+        line-height: transRem(220px);
+        background: $gymFontWhiteColor;
+        border-radius: $divBorderRadius / 2;
+        margin-bottom: transRem(12px);
+        box-shadow: 0px 0px transRem(28px) rgba(0,0,0,0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      }
+      &-desc{
+        font-size: transRem(14px);
+        margin-bottom: transRem(5px);
+        &.sm{
+          text-align: center;
+          color: $gymFontWhiteColor;
+          font-size: transRem(14px);
+        }
+      }
+    }
+  }
+}

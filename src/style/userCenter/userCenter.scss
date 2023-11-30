@@ -1,0 +1,58 @@
+/**
+ * desc: 个人中心样式
+ * User: Renjian.Tang/renjian.tang@gymboglobal.com
+ * Date: 2018/9/13
+ * Time: 下午3:23
+ */
+@import "../func";
+@import "../theme";
+
+.gym-user-center{
+  background: $gymFontWhiteColor;
+  padding: transArray(0 20px);
+  height: transRem(700px);
+  &-title{
+    padding: transArray(20px 20px 0 20px);
+    line-height: transRem(22px);
+    color: $secondThemeColor;
+    &-icon{
+      font-size: transRem(22px);
+    }
+    &-text{
+      font-size: transRem(16px);
+    }
+  }
+
+  &-breadcrumb{
+    margin-bottom: transArray(19px);
+    padding: transArray(0 20px);;
+  }
+
+  &-content{
+    background: $gymInputBackground;
+    border-radius: $divBorderRadius;
+    padding: transArray(15px 80px);
+    &-item{
+      min-height: transRem(45px);
+      line-height: transRem(45px);
+      font-size: transRem(14px);
+    }
+    &-label{
+      color:#666;
+    }
+    &-text{
+      color: #333;
+      //display: inline-block;
+      //width: transRem(300px);
+    }
+    .gym-input-select, .gym-input{
+      width: transRem(200px);
+    }
+
+    .icon{
+      color: $themeColor;
+      font-size: transRem(18px);
+      margin-left: transRem(5px);
+    }
+  }
+}

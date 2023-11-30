@@ -1,0 +1,29 @@
+/**
+ * desc: 
+ * User: Renjian.Tang/renjian.tang@gymboglobal.com
+ * Date: 2018/8/1
+ * Time: 下午3:47
+ */
+#gym-loading{
+  position: fixed;
+  z-index: 99;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  background: rgba(0,0,0,0.2);
+  &.show{
+    dispaly:block;
+  }
+  &.hide{
+    display: none;
+  }
+  .gym-loading-icon{
+    color: #fff;
+    font-size: 50px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
